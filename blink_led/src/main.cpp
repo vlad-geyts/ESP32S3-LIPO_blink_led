@@ -28,7 +28,8 @@ void setup() {
     // Get and print SRAM memory information
     Serial0.printf("Internal free Heap at setup: %d bytes\n", ESP.getFreeHeap());
     if(psramFound()){
-        Serial0.printf("Total PSRAM Size: %d bytes", ESP.getPsramSize());
+        Serial0.printf("Total PSRAM Size: %d bytes\n", ESP.getPsramSize());
+        Serial0.printf("PSRAM free:  %u bytes\n", ESP.getFreePsram());
     } else {
          Serial0.print("No PSRAM found");
     }
